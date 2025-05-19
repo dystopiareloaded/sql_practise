@@ -11,12 +11,12 @@ class DB:
                 host=config["host"],
                 user=config["username"],
                 password=config["password"],
-                database=config["database"],
+                database=config["dbname"],
                 port=config["port"]
             )
             self.cursor = self.conn.cursor()
             print("✅ MySQL DB connected")
-            
+
         except Exception as e:
             print("❌ Connection failed:", e)
 
